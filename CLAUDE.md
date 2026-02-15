@@ -143,6 +143,7 @@ nlm source add cross-tool-kb --file <changed-file> -w
 
 ## Slash Commands
 
+### Developer Workflows
 | Command | Description |
 |---|---|
 | `/second-brain` | Initialize or update project knowledge base |
@@ -153,18 +154,48 @@ nlm source add cross-tool-kb --file <changed-file> -w
 | `/visualize-docs` | Generate mind maps, infographics, slides from notebook |
 | `/security-audit` | Build security handbook + run codebase audit |
 
+### Knowledge Work & PM Workflows
+| Command | Description |
+|---|---|
+| `/meeting-notes` | Capture meeting notes, decisions, and action items |
+| `/project-brief` | Create notebook from PRDs, specs, and stakeholder docs |
+| `/literature-review` | Build a research notebook, synthesize findings |
+| `/competitive-analysis` | Collect competitor intel, generate comparison reports |
+| `/content-planner` | Aggregate source material, generate outlines and drafts |
+| `/knowledge-base` | General-purpose KB for any domain |
+| `/stakeholder-brief` | Distill work into exec summaries, slides, and audio |
+
 ---
 
 ## File Structure
 
 ```
-7-notebook-lm/
+2ndBrain/
 ├── CLAUDE.md                          # This file — core instructions
 ├── README.md                          # Human-readable quick-start
 ├── setup.sh                           # Dependency check + auth
 ├── .claude/
-│   ├── settings.json                  # Tool search config
-│   ├── commands/                      # 7 slash commands
-│   └── skills/notebooklm/            # NLM skill + CLI reference
-└── templates/                         # Portable configs + security URLs
+│   ├── settings.json                  # Tool permissions (nlm, repomix)
+│   ├── commands/                      # 14 slash commands
+│   │   ├── second-brain.md            # Project knowledge base
+│   │   ├── research.md                # Deep research
+│   │   ├── explain-codebase.md        # Codebase visualization
+│   │   ├── debug-companion.md         # Debugging KB
+│   │   ├── cross-tool-context.md      # Cross-tool AI context
+│   │   ├── visualize-docs.md          # Visual artifacts
+│   │   ├── security-audit.md          # Security handbook + audit
+│   │   ├── meeting-notes.md           # Meeting notes & decisions
+│   │   ├── project-brief.md           # PRD & specs hub
+│   │   ├── literature-review.md       # Research synthesis
+│   │   ├── competitive-analysis.md    # Competitive intelligence
+│   │   ├── content-planner.md         # Content planning & drafting
+│   │   ├── knowledge-base.md          # General-purpose KB
+│   │   └── stakeholder-brief.md       # Stakeholder communication
+│   └── skills/notebooklm/
+│       ├── SKILL.md                   # Auto-triggering NLM skill
+│       └── references/
+│           └── nlm-cli-reference.md   # Full CLI command reference
+└── templates/
+    ├── notebook-config.md             # Portable CLAUDE.md snippet
+    └── security-sources.md            # Security URLs (TS, Python, Shell)
 ```

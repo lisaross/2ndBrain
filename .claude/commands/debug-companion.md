@@ -11,13 +11,9 @@ Build and query a stack-specific debugging companion. Auto-detects your tech sta
 ### If argument is `init`
 
 1. Detect the project's tech stack by examining:
-   - `package.json` (Node.js, React, Vue, etc.)
+   - `package.json` / `tsconfig.json` (TypeScript / Node.js)
    - `requirements.txt` / `pyproject.toml` / `Pipfile` (Python)
-   - `go.mod` (Go)
-   - `Cargo.toml` (Rust)
-   - `Gemfile` (Ruby)
-   - `pom.xml` / `build.gradle` (Java)
-   - Framework-specific config files
+   - `*.sh` files, `Makefile`, `Dockerfile` (Shell / Bash)
 
 2. Create the debug companion notebook:
    ```
@@ -35,10 +31,9 @@ Build and query a stack-specific debugging companion. Auto-detects your tech sta
    ```
 
    Example URLs by stack:
-   - **Node.js**: Node.js debugging guide, common error patterns
-   - **React**: React error boundaries, common pitfalls
-   - **Python**: Python debugging docs, common exceptions
-   - **TypeScript**: TS error reference, strict mode guide
+   - **TypeScript / Node.js**: Node.js debugging guide, TS error reference, common error patterns
+   - **Python**: Python debugging docs, common exceptions, traceback patterns
+   - **Shell / Bash**: ShellCheck rules, common scripting pitfalls, exit code patterns
 
 5. Add a note with the detected stack summary:
    ```
